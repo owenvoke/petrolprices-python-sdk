@@ -22,7 +22,12 @@ from petrolprices import PetrolPrices
 
 petrolprices = PetrolPrices(api_token="your-token")
 
-sites = petrolprices.search()
+nearby = petrolprices.search(
+    "lat",
+    "lng",
+    fuel_type: FuelTypeEnum.Unleaded,
+    sort_method: SortMethod.Cheapest
+)
 ```
 
 | Available Methods          | Description                                                                        |
