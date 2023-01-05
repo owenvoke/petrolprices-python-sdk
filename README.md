@@ -25,7 +25,7 @@ petrolprices = PetrolPrices(api_token="your-token")
 nearby = petrolprices.search(
     "lat",
     "lng",
-    fuel_type: FuelTypeEnum.Unleaded,
+    fuel_type: FuelType.Unleaded,
     sort_method: SortMethod.Cheapest
 )
 ```

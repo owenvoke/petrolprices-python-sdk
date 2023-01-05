@@ -7,7 +7,7 @@ class Geometry:
     coordinates: list[float]
 
 
-class FuelTypeEnum(IntEnum):
+class FuelType(IntEnum):
     SuperUnleaded = 1
     Unleaded = 2
     PremiumDiesel = 4
@@ -26,7 +26,7 @@ class ReviewEntry:
 
 class EntryProperties:
     price: float
-    fuel_type: FuelTypeEnum
+    fuel_type: FuelType
     user_id: Optional[int]
     recorded_time: Optional[str]
     user_name: Optional[str]

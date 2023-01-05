@@ -2,7 +2,7 @@ from typing import Optional, cast
 
 import requests
 
-from .types import SearchEntriesCollection, FuelTypeEnum, SortMethod
+from .types import SearchEntriesCollection, FuelType, SortMethod
 
 TIMEOUT = 3
 BASE_URI = "https://app.petrolprices.com"
@@ -33,7 +33,7 @@ class PetrolPrices:
         self,
         latitude: float,
         longitude: float,
-        fuel_type: FuelTypeEnum = FuelTypeEnum.Unleaded,
+        fuel_type: FuelType = FuelType.Unleaded,
         sort_method: SortMethod = SortMethod.Cheapest,
         max_distance: int = 5,
     ) -> SearchEntriesCollection:
