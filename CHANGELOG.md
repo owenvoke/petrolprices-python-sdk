@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ## Unreleased
 
+## v0.2.2 - 2023-11-21
+
+### Added
+- Add debug logging for requests
+
+### Fixed
+- Resolve invalid query parameter (`longitude` -> `lng`)
+
 ## v0.2.1 - 2023-11-21
 
 ### Fixed

@@ -8,7 +8,7 @@ petrolprices = PetrolPrices("abcdefghijklmnopqrstuvwxyz123457890")
 def test_search_with_no_results():
     with requests_mock.Mocker() as m:
         m.get(
-            url="https://app.petrolprices.com/geojson/2/0/0/0/price/5?lat=1.2345678901&longitude=1.2345678901",
+            url="https://app.petrolprices.com/geojson/2/0/0/0/price/5?lat=1.2345678901&lng=1.2345678901",
             json={
                 "error": False,
                 "limitExceed": False,
