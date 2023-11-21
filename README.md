@@ -18,15 +18,15 @@ pip install petrolprices-sdk
 ## Usage
 
 ```python
-from petrolprices import PetrolPrices
+from petrolprices import PetrolPrices, FuelType, SortMethod
 
 petrolprices = PetrolPrices(api_token="your-token")
 
 nearby = petrolprices.search(
-    "lat",
-    "lng",
-    fuel_type: FuelType.Unleaded,
-    sort_method: SortMethod.Cheapest
+    latitude=123,
+    longitude=456,
+    fuel_type=FuelType.Unleaded,
+    sort_method=SortMethod.Cheapest
 )
 ```
 

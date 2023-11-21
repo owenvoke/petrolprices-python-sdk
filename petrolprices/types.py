@@ -2,11 +2,6 @@ from enum import StrEnum, IntEnum
 from typing import TypedDict, Optional
 
 
-class Geometry:
-    type: str
-    coordinates: list[float]
-
-
 class FuelType(IntEnum):
     SuperUnleaded = 1
     Unleaded = 2
@@ -19,12 +14,17 @@ class SortMethod(StrEnum):
     Cheapest = "price"
 
 
-class ReviewEntry:
+class Geometry(TypedDict):
+    type: str
+    coordinates: list[float]
+
+
+class ReviewEntry(TypedDict):
     count: int
     avg_rating: float
 
 
-class EntryProperties:
+class EntryProperties(TypedDict):
     price: float
     fuel_type: FuelType
     user_id: Optional[int]
