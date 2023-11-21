@@ -1,3 +1,4 @@
+import logging
 from typing import Optional, cast
 
 import requests
@@ -6,6 +7,8 @@ from .types import SearchEntriesCollection, FuelType, SortMethod
 
 TIMEOUT = 3
 BASE_URI = "https://app.petrolprices.com"
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class PetrolPricesException(RuntimeError):
@@ -59,6 +62,8 @@ class PetrolPrices:
     def __request(self, method: str, url: str, params: Optional[dict] = None):
         if params is None:
             params = {}
+
+        _LOGGER.debug("{} {}".format(method, url))
 
         if method == "GET":
             response = requests.get(
