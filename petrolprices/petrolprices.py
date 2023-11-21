@@ -41,7 +41,7 @@ class PetrolPrices:
         max_distance: int = 5,
     ) -> SearchEntriesCollection:
         response = self.get(
-            "/geojson/{3}/0/0/0/{2}/{4}?lat={0}&longitude={1}".format(
+            "/geojson/{3}/0/0/0/{2}/{4}?lat={0}&lng={1}".format(
                 latitude, longitude, sort_method.value, fuel_type.value, max_distance
             )
         )
